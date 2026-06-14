@@ -1,4 +1,5 @@
-<h1 align="center">¡Hola! 👋 Soy Luis Alberto / Hi, I'm Luis Alberto</h1>
+<h1 align="center">🚀 De la idea al deploy / From idea to deploy</h1>
+<h2 align="center">Soy Luis Alberto / I'm Luis Alberto</h2>
 <h3 align="center">🧩 Software Developer · Leading App Design & Development 🚀</h3>
 <p align="center"><i>Construyo software, lo lidero, y ahora también lo cuento en video.<br/>I build software, lead it, and now I talk about it on video too.</i></p>
 
@@ -70,7 +71,7 @@
   <a href="https://youtube.com/@neocoba-f8b" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
-  <a href="https://www.tiktok.com/" target="_blank">
+  <a href="https://www.tiktok.com" target="_blank">
     <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok" />
   </a>
   <a href="https://www.instagram.com/neocoba1/" target="_blank">
