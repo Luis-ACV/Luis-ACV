@@ -13,14 +13,12 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/TU-USUARIO" target="_blank">
+  <a href="https://www.linkedin.com/in/luisalbertocobavn" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <!--
-  <a href="mailto:tu-correo@ejemplo.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <a href="mailto:luis_acv_work963@outlook.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=microsoftoutlook&logoColor=white" alt="Email" />
   </a>
-  -->
 </p>
 
 ---
@@ -69,18 +67,16 @@
 🇺🇸 I make videos about software development, data, and tech — what I build, how I build it, and what I learn along the way.
 
 <p align="center">
-  <a href="https://www.youtube.com/@TU-CANAL" target="_blank">
+  <a href="https://youtube.com/@neocoba-f8b" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
-  <a href="https://www.tiktok.com/@TU-USUARIO" target="_blank">
+  <a href="https://www.tiktok.com/" target="_blank">
     <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="TikTok" />
   </a>
-  <a href="https://www.instagram.com/TU-USUARIO" target="_blank">
+  <a href="https://www.instagram.com/neocoba1/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
 </p>
-
-> 🔗 *Cambia estos links por tus canales reales / Replace these with your real channel links*
 
 ---
 
