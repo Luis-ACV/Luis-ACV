@@ -1,0 +1,69 @@
+name: Update Top Repos
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # todos los días a las 6:00 UTC
+  workflow_dispatch:        # también permite ejecutarlo manualmente desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch top repos by stars and update README
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const username = 'Luis-ACV';
+
+            // Trae todos los repos públicos del usuario (paginado automático)
+            const repos = await github.paginate(github.rest.repos.listForUser, {
+              username,
+              per_page: 100,
+              type: 'owner',
+            });
+
+            const topRepos = repos
+              .filter(r => !r.fork && !r.archived && !r.private)
+              .sort((a, b) => b.stargazers_count - a.stargazers_count)
+              .slice(0, 5);
+
+            let block;
+            if (topRepos.length === 0) {
+              block = '_Sin repos públicos con estrellas todavía / No starred public repos yet._';
+            } else {
+              block = topRepos
+                .map(r => {
+                  const desc = r.description ? ` — ${r.description}` : '';
+                  return `- ⭐ **[${r.name}](${r.html_url})**${desc} (${r.stargazers_count} ⭐)`;
+                })
+                .join('\n');
+            }
+
+            const start = '<!-- TOP-REPOS:START -->';
+            const end = '<!-- TOP-REPOS:END -->';
+            const readme = fs.readFileSync('README.md', 'utf8');
+
+            const regex = new RegExp(`${start}[\\s\\S]*?${end}`);
+            const replacement = `${start}\n${block}\n${end}`;
+
+            const updated = readme.replace(regex, replacement);
+            fs.writeFileSync('README.md', updated);
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --staged --quiet; then
+            git commit -m "docs: actualizar proyectos más populares"
+            git push
+          else
+            echo "Sin cambios, nada que commitear."
+          fi
